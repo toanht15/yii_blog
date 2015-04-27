@@ -2,12 +2,13 @@
 
 class CommentController extends Controller
 {
+	
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-
+	private $_model;
 	/**
 	 * @return array action filters
 	 */
@@ -24,16 +25,16 @@ class CommentController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-		public function accessRules()
+	public function accessRules()
 	{
 		return array(
 			array('allow', // allow authenticated users to access all actions
 				'users'=>array('@'),
-			),
+				),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
-		);
+				),
+			);
 	}
 
 	/**
@@ -119,7 +120,7 @@ class CommentController extends Controller
 				'order'=>'t.status, t.create_time DESC',
 				),
 			));
-		
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			));
@@ -147,12 +148,16 @@ class CommentController extends Controller
 	 * @return Comment the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel($id)
+	public function loadModel()
 	{
-		$model=Comment::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		if($this->_model===null)
+		{
+			if(isset($_GET['id']))
+				$this->_model=Comment::model()->findbyPk($_GET['id']);
+			if($this->_model===null)
+				throw new CHttpException(404,'The requested page does not exist.');
+		}
+		return $this->_model;
 	}
 
 	/**
