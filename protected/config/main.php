@@ -1,5 +1,6 @@
-<?php
 
+
+<?php
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
@@ -10,13 +11,22 @@ return array(
 	'name'=>'My Yii Blog',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log','booster'),
 	'defaultController'=>'post',
 
+	/* 'aliases' => array(
+        'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'), // change this if necessary
+    ),
+*/
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		// 'bootstrap.helpers.*',
+		// 'bootstrap.behaviors.*',
+		// 'bootstrap.widgets.*',
+		// 'bootstrap.components.*',
+		// 'bootstrap.form.*',
 	),
 
 	'modules'=>array(
@@ -27,16 +37,22 @@ return array(
 			'password'=>'ccnnts',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths' => array('booster.gii'),
 		),
 		
 	),
 
+
 	// application components
 	'components'=>array(
+		
 
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+		),
+		'booster' => array(
+		    'class' => 'ext.booster.components.Booster',
 		),
 
 		// uncomment the following to enable URLs in path-format
