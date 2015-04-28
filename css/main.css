@@ -9,7 +9,7 @@ body
 
 #page
 {
-	margin-top: 5px;
+	margin-top: 50px;
 	margin-bottom: 5px;
 	background: white;
 	border: 1px solid #C9E0ED;
@@ -50,6 +50,7 @@ body
 #mainmenu
 {
 	background:white url(bg.gif) repeat-x left top;
+
 }
 
 #mainmenu ul
@@ -58,16 +59,16 @@ body
 	margin:0px;
 }
 
-#mainmenu ul li
+ #mainmenu ul li
 {
 	display: inline;
 }
-
+ 
 #mainmenu ul li a
 {
 	color:#ffffff;
 	background-color:transparent;
-	font-size:12px;
+	font-size:15px;
 	font-weight:bold;
 	text-decoration:none;
 	padding:5px 8px;
@@ -79,6 +80,8 @@ body
 	background-color:#EFF4FA;
 	text-decoration:none;
 }
+
+
 
 div.flash-error, div.flash-notice, div.flash-success
 {
@@ -148,7 +151,7 @@ div.breadcrumbs span
 
 .portlet
 {
-
+	margin-top: 50px;	
 }
 
 .portlet-decoration
