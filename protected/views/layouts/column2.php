@@ -5,7 +5,7 @@
 		<?php echo $content; ?>
 	</div><!-- content -->
 </div>
-<div class="span-5 last">
+<div class="span-7 last">
 	<div id="sidebar">
 		<?php if(!Yii::app()->user->isGuest) $this->widget('UserMenu'); ?>
 

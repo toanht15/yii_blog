@@ -73,7 +73,7 @@
         			//array('label' => 'Home', 'url' =>array('/')),
         			),
         		),
-        	'<form class="navbar-form navbar-left" style="margin-left::;" action=""><div class="form-group"><input type="text" class="form-control" placeholder="Search"></div></form>',
+        	'<form class="navbar-form navbar-left" style="margin-left:20px" action=""><div class="form-group"><input type="text" class="form-control" placeholder="Search"></div></form>',
         	array(
         		'class' => 'booster.widgets.TbMenu',
         		'type' => 'navbar',
@@ -88,7 +88,7 @@
         				'url' => '#',
         				'items' => array(
         					array('label' => 'Profile', 'url' => '#'),
-        					array('label' => 'Another action', 'url' => '#'),
+        					array('label' => 'List Post', 'url' => array('/post/index')),
         					array(
         						'label' => 'Something else here',
         						'url' => '#'
