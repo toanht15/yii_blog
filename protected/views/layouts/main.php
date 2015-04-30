@@ -80,7 +80,7 @@
         		'htmlOptions' => array('class' => 'pull-right', 'style'=>'margin-right: 70px'),
         		'items' => array(
         			array('label' => 'About', 'url' => array('/site/page', 'view'=>'about')),
-        			array('label'=> 'Contact','url'=> array('/site/contact')),
+        			array('label'=> 'Contact','url'=> "#LoginModal",'linkOptions' => array('data-toggle'=>'modal')	),
         			array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
         			array(
         				'label' => ''.Yii::app()->user->name.'',
@@ -104,6 +104,53 @@
 );
 ?>
 </div>
+
+
+<?php $this->beginWidget(
+    'booster.widgets.TbModal',
+    array('id' => 'LoginModal')
+); ?>
+ 
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3>Login</h3>
+    </div>
+ 
+    <div class="modal-body">
+        <div class="testform">
+<?php $model=new LoginForm;
+$form = $this->beginWidget(
+    'booster.widgets.TbActiveForm',
+    array(
+        'id' => 'verticalForm',
+        'htmlOptions' => array('class' => 'login-form'), // for inset effect
+        'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+	'action'=>array('site/login'),
+    )
+); 
+
+  echo $form->textFieldGroup($model, 'username');
+  echo $form->error($model,'username');
+  echo $form->passwordFieldGroup($model, 'password'); 
+  echo $form->error($model,'password');
+  echo $form->checkboxGroup($model, 'rememberMe');
+  echo $form->error($model,'rememberMe');
+
+
+
+$this->widget(
+    'booster.widgets.TbButton',
+    array('buttonType' => 'submit', 'label' => 'Login')
+); 
+
+
+ $this->endWidget();
+unset($form); ?>
+<?php $this->endWidget(); ?> <!--end modal-->
+
 
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by OWS.<br/>

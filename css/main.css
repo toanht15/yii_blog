@@ -268,3 +268,15 @@ div.breadcrumbs span
 {
 	color:red;
 }
+
+
+.login-form {
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.login-	form input{
+	margin-bottom: 10px;
+}

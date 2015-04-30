@@ -9,7 +9,6 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Yii Blog',
-
 	// preloading 'log' component
 	'preload'=>array('log','booster'),
 	'defaultController'=>'post',
