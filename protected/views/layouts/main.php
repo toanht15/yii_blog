@@ -81,7 +81,8 @@
         		'items' => array(
         			array('label' => 'About', 'url' => array('/site/page', 'view'=>'about')),
         			array('label'=> 'Contact','url'=> "#LoginModal",'linkOptions' => array('data-toggle'=>'modal')	),
-        			array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                    //array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+        			array('label'=>'Login', 'url'=>"#LoginModal",'linkOptions' => array('data-toggle'=>'modal'), 'visible'=>Yii::app()->user->isGuest),
         			array(
         				'label' => ''.Yii::app()->user->name.'',
         				'visible'=>!Yii::app()->user->isGuest,
