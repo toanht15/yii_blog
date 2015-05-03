@@ -236,3 +236,47 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
+
+
+/** Photo view **/
+
+div.photo {
+    width: 100%;
+    position: relative;
+    background: #F7F7F7;
+    }
+div.photo .caption {
+    width: 100%;
+    margin: 0 auto;
+    display: inherit ;
+    top: 0px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+/** Photo _view **/
+.imgWrap {
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+}
+.caption {
+    //display: none;
+    width: 88%;
+    margin: 0 15px 16px 12px;
+    height: 40px;
+    //position: absolute;
+    bottom: 10px;
+    left: 0px;
+   //background: url(../images/bg.png);
+    text-align: center;
+}
+
+div.view {
+    width: 300px;
+    float:left;
+    background: #F7F7F7;
+    margin-right: 20px;
+    min-height: 175px;
+    position: relative;
+}
