@@ -6,7 +6,7 @@ class AlbumController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column3';
 
 	/**
 	 * @return array action filters
@@ -24,7 +24,7 @@ class AlbumController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+/*	public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -43,6 +43,22 @@ class AlbumController extends Controller
 				'users'=>array('*'),
 			),
 		);
+	}*/
+
+	public function accessRules()
+	{
+		return array(
+        array('allow',  // allow all users to perform 'list' and 'show' actions
+        	'actions'=>array('index', 'view'),
+        	'users'=>array('*'),
+        	),
+        array('allow', // allow authenticated users to perform any action
+        	'users'=>array('@'),
+        	),
+        array('deny',  // deny all users
+        	'users'=>array('*'),
+        	),
+        );
 	}
 
 	/**
@@ -51,10 +67,17 @@ class AlbumController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->layout='//layouts/column3';
+		$photos=$dataProvider=new CActiveDataProvider('Photo', array(
+			'criteria'=>array(
+				'condition'=>'album_id=:aid',
+				'params'=>array(':aid'=>$id)
+				)
+			));
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-		));
+			'photos'=>$photos,
+			));
 	}
 
 	/**
@@ -63,24 +86,27 @@ class AlbumController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$this->layout='//layouts/column3';
 		$model=new Album;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Album']))
 		{
 			$model->attributes=$_POST['Album'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save())  {
+                            Yii::app()->user->setFlash('saved', "Data saved!");
+                            $this->redirect(array('update','id'=>$model->id));
+                        } else {
+                            Yii::app()->user->setFlash('failure', "Data Not saved!");
+                        }
+                        
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
 		));
 	}
-
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -91,18 +117,32 @@ class AlbumController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Album']))
 		{
 			$model->attributes=$_POST['Album'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save())  {
+				Yii::app()->user->setFlash('saved', "Data saved!");
+				$this->redirect(array('update','id'=>$model->id));
+			} else {
+				Yii::app()->user->setFlash('failure', "Data Not saved!");
+			}
+
 		}
+
+		Yii::import("xupload.models.XUploadForm");
+		$uploads= new XUploadForm;
+
+		$photos=new Photo('search');
+		$photos->unsetAttributes();
+		$photos->album_id=$id;
 
 		$this->render('update',array(
 			'model'=>$model,
-		));
+			'uploads'=>$uploads,
+			'photos'=>$photos,
+			));
 	}
 
 	/**
@@ -136,6 +176,7 @@ class AlbumController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		$this->layout='//layouts/column3';
 		$model=new Album('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Album']))
@@ -172,5 +213,106 @@ class AlbumController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	/**
+	 *Manage Image Uploads Using XUpload Extension
+	 * $id: album_id 
+	 */
+	public function actionUpload($id) {
+		Yii::import( "xupload.models.XUploadForm" );
+		//Here we define the paths where the files will be stored temporarily
+		$path = realpath( dirname(Yii::app()->request->scriptFile).Yii::app()->params['uploads'] ).DIRECTORY_SEPARATOR;
+		$publicPath = Yii::app()->getBaseUrl().Yii::app()->params['uploads']."/";
+    
+		//This is for IE which doens't handle 'Content-type: application/json' correctly
+		header( 'Vary: Accept' );
+		if( isset( $_SERVER['HTTP_ACCEPT'] ) 
+		    && (strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ) !== false) ) {
+		    header( 'Content-type: application/json' );
+		} else {
+		    header( 'Content-type: text/plain' );
+		}
+
+		//Here we check if we are deleting and uploaded file
+		if( isset( $_GET["_method"] ) ) {
+		    if( $_GET["_method"] == "delete" ) {
+			if( $_GET["file"][0] !== '.' ) {
+			    $file = $_GET["file"];
+			    if( is_file( $path.$file ) ) {
+				$photo=Photo::model()->find('filename=:filename',array(':filename'=>$file));
+				if ($photo) $photo->delete();
+				unlink( $path.$file );
+				unlink ($path."thumbs/".$file);
+			    }
+			}
+			echo json_encode( true );
+		    }
+		} else {
+		    $model = new XUploadForm;
+		    $model->file = CUploadedFile::getInstance($model, 'file');
+		    //We check that the file was successfully uploaded
+		    if( $model->file !== null ) {
+			//Grab some data
+			$model->mime_type = $model->file->getType();
+			$model->size = $model->file->getSize();
+			$model->name = $model->file->getName();
+			//(optional) Generate a random name for our file
+			$filename = md5( Yii::app( )->user->id.microtime().$model->name);
+			$filename .= ".".$model->file->getExtensionName();
+			if($model->validate()) {
+			    //Move our file to our temporary dir
+			    $model->file->saveAs($path.$filename);
+			    //chmod( $path.$filename, 0777 );
+			    //here you can also generate the image versions you need 
+			    //using something like PHPThumb
+
+
+			    $image = Yii::app()->image->load($path.$filename);
+			    $size=Yii::app()->params['thumbSize'] ;
+			    $image->resize($size, $size)->quality(75)->sharpen(20);
+			    $image->save($path."thumbs/".$filename, FALSE); 
+                
+			    $photo=new Photo;
+			    $photo->album_id=$id;
+			    $photo->filename=$filename;
+				if ($photo->save()) {
+				//Now we need to tell our widget that the upload was succesfull
+				//We do so, using the json structure defined in
+				// https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
+				echo json_encode( array( array(
+					"name" => $model->name,
+					"type" => $model->mime_type,
+					"size" => $model->size,
+					"url" => $publicPath.$filename,
+					"thumbnail_url" => $publicPath."thumbs/$filename",
+					"delete_url" => $this->createUrl( "upload", array(
+					    "_method" => "delete",
+					    "file" => $filename
+					) ),
+					"delete_type" => "POST"
+				    ) ) );
+				} else {
+				    //If the upload failed for some reason we log some data and let the widget know
+				    echo json_encode( array( 
+					array( "error" => $model->getErrors( 'file' ),
+				    ) ) );
+				    Yii::log( "XUploadAction: ".CVarDumper::dumpAsString( $model->getErrors( ) ),
+					CLogger::LEVEL_ERROR, "xupload.actions.XUploadAction" 
+				    );
+				}
+			} else {
+			    //If the upload failed for some reason we log some data and let the widget know
+			    echo json_encode( array( 
+				array( "error" => $model->getErrors( 'file' ),
+			    ) ) );
+			    Yii::log( "XUploadAction: ".CVarDumper::dumpAsString( $model->getErrors( ) ),
+				CLogger::LEVEL_ERROR, "xupload.actions.XUploadAction" 
+			    );
+			}
+		    } else {
+			throw new CHttpException( 500, "Could not upload file" );
+		    }
+		}	    
 	}
 }

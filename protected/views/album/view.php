@@ -16,16 +16,10 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Album #<?php echo $model->id; ?></h1>
+<h1><?php echo CHtml::encode($model->name); ?></h1>
+ <p class="By">created on <span class="Date"><?php echo $model->created_dt; ?></span></p>
+<p class=""><?php echo CHtml::encode($model->description); ?></p> 
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'name',
-		'tags',
-		'owner_id',
-		'shareable',
-		'created_dt',
-	),
-)); ?>
+<?php
+    $this->renderPartial('/photo/index',array('dataProvider'=>$photos));
+?>

@@ -7541,3 +7541,933 @@ Stack trace:
 REQUEST_URI=/index.php/photo/admin
 HTTP_REFERER=http://myblog.dev/index.php/photo/index
 ---
+2015/05/03 14:50:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/admin')
+#9 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/myblog/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/album/admin
+HTTP_REFERER=http://myblog.dev/index.php/album/create
+---
+2015/05/03 14:54:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/admin')
+#9 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/myblog/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/album/admin
+HTTP_REFERER=http://myblog.dev/index.php/album/create
+---
+2015/05/03 14:54:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/admin')
+#9 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/myblog/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/album/admin
+HTTP_REFERER=http://myblog.dev/index.php/album/create
+---
+2015/05/03 15:19:30 [warning] [application] Failed to set unsafe attribute "created_dt" of "Album".
+in /var/www/myblog/protected/controllers/AlbumController.php (114)
+in /var/www/myblog/index.php (13)
+2015/05/03 15:20:04 [warning] [application] Failed to set unsafe attribute "created_dt" of "Album".
+in /var/www/myblog/protected/controllers/AlbumController.php (114)
+in /var/www/myblog/index.php (13)
+2015/05/03 15:21:51 [warning] [application] Failed to set unsafe attribute "created_dt" of "Album".
+in /var/www/myblog/protected/controllers/AlbumController.php (114)
+in /var/www/myblog/index.php (18)
+2015/05/04 02:17:46 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "username".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('username', Array)
+#1 /var/www/myblog/protected/views/album/view.php(20): CActiveRecord->__call('username', Array)
+#2 /var/www/myblog/protected/views/album/view.php(20): User->username()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /var/www/myblog/protected/controllers/AlbumController.php(80): CController->render('view', Array)
+#8 [internal function]: AlbumController->actionView('2')
+#9 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/view')
+#21 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#22 /var/www/myblog/index.php(18): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php/album/view?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/index
+---
+2015/05/04 02:20:27 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "username".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('username', Array)
+#1 /var/www/myblog/protected/views/album/view.php(20): CActiveRecord->__call('username', Array)
+#2 /var/www/myblog/protected/views/album/view.php(20): User->username()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /var/www/myblog/protected/controllers/AlbumController.php(80): CController->render('view', Array)
+#8 [internal function]: AlbumController->actionView('2')
+#9 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/view')
+#21 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#22 /var/www/myblog/index.php(18): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php/album/view?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/index
+---
+2015/05/04 02:54:51 [error] [php] include(/var/www/myblog/protected/extensions/xupload/models/XUploadForm.php): failed to open stream: Permission denied (/var/www/yii/framework/YiiBase.php:404)
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(135): spl_autoload_call()
+#1 unknown(0): AlbumController->actionUpdate()
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): AlbumController->runAction()
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AlbumController->filterAccessControl()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): AlbumController->runActionWithFilters()
+#12 /var/www/yii/framework/web/CWebApplication.php(282): AlbumController->run()
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CWebApplication->run()
+REQUEST_URI=/index.php/album/update?id=1
+in /var/www/myblog/protected/controllers/AlbumController.php (135)
+in /var/www/myblog/index.php (18)
+2015/05/04 02:57:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update/1')
+#10 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/myblog/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/album/update/1
+---
+2015/05/04 02:57:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#10 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /var/www/myblog/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/album/update
+---
+2015/05/04 03:37:16 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:37:16 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:37:16 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:38:28 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:38:28 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:38:28 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:48:17 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:51:09 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:51:56 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('2')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=2
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=2
+---
+2015/05/04 03:56:23 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 03:57:49 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 03:58:59 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Could not upload file' in /var/www/myblog/protected/controllers/AlbumController.php:309
+Stack trace:
+#0 [internal function]: AlbumController->actionUpload('4')
+#1 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#13 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /var/www/myblog/index.php(18): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+---
+2015/05/04 04:00:00 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 04:02:05 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(268): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 04:02:12 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Could not upload file' in /var/www/myblog/protected/controllers/AlbumController.php:309
+Stack trace:
+#0 [internal function]: AlbumController->actionUpload('4')
+#1 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#13 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /var/www/myblog/index.php(18): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+---
+2015/05/04 04:10:22 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(269): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 04:11:10 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(269): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 04:13:40 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(269): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 04:14:52 [error] [exception.CException] exception 'CException' with message 'image invalid dimensions' in /var/www/myblog/protected/extensions/image/Image.php:172
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(269): Image->resize(NULL, NULL)
+#1 [internal function]: AlbumController->actionUpload('4')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('upload')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/upload')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/upload?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 04:26:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/admin')
+#9 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/myblog/index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/album/admin
+HTTP_REFERER=http://myblog.dev/index.php/album/view?id=4
+---
+2015/05/04 08:41:58 [error] [exception.CException] exception 'CException' with message 'Photo and its behaviors do not have a method or closure named "getThumbnail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getThumbnail', Array)
+#1 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): CActiveRecord->__call('getThumbnail', Array)
+#2 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): Photo->getThumbnail()
+#3 /var/www/yii/framework/base/CComponent.php(612): eval()
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(142): CComponent->evaluateExpression('$data->getThumb...', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Photo))
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow(0)
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(149): CBaseListView->renderContent()
+#15 /var/www/yii/framework/web/CBaseController.php(181): CBaseListView->run()
+#16 /var/www/myblog/protected/views/album/_photos.php(32): CBaseController->widget('zii.widgets.gri...', Array)
+#17 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#18 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#20 /var/www/myblog/protected/views/album/update.php(23): CController->renderPartial('_photos', Array)
+#21 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#22 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#23 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#24 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('update', Array, true)
+#25 /var/www/myblog/protected/controllers/AlbumController.php(145): CController->render('update', Array)
+#26 [internal function]: AlbumController->actionUpdate('4')
+#27 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#28 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#29 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#30 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#31 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#32 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#33 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#34 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#35 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#36 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#38 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#39 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#40 /var/www/myblog/index.php(18): CApplication->run()
+#41 {main}
+REQUEST_URI=/index.php/album/update?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/admin
+---
+2015/05/04 08:43:20 [error] [exception.CException] exception 'CException' with message 'Photo and its behaviors do not have a method or closure named "getThumbnail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getThumbnail', Array)
+#1 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): CActiveRecord->__call('getThumbnail', Array)
+#2 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): Photo->getThumbnail()
+#3 /var/www/yii/framework/base/CComponent.php(612): eval()
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(142): CComponent->evaluateExpression('$data->getThumb...', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Photo))
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow(0)
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(149): CBaseListView->renderContent()
+#15 /var/www/yii/framework/web/CBaseController.php(181): CBaseListView->run()
+#16 /var/www/myblog/protected/views/album/_photos.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#17 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#18 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#20 /var/www/myblog/protected/views/album/update.php(23): CController->renderPartial('_photos', Array)
+#21 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#22 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#23 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#24 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('update', Array, true)
+#25 /var/www/myblog/protected/controllers/AlbumController.php(145): CController->render('update', Array)
+#26 [internal function]: AlbumController->actionUpdate('4')
+#27 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#28 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#29 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#30 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#31 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#32 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#33 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#34 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#35 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#36 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#38 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#39 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#40 /var/www/myblog/index.php(18): CApplication->run()
+#41 {main}
+REQUEST_URI=/index.php/album/update?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/admin
+---
+2015/05/04 08:43:21 [error] [exception.CException] exception 'CException' with message 'Photo and its behaviors do not have a method or closure named "getThumbnail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getThumbnail', Array)
+#1 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): CActiveRecord->__call('getThumbnail', Array)
+#2 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): Photo->getThumbnail()
+#3 /var/www/yii/framework/base/CComponent.php(612): eval()
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(142): CComponent->evaluateExpression('$data->getThumb...', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Photo))
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow(0)
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(149): CBaseListView->renderContent()
+#15 /var/www/yii/framework/web/CBaseController.php(181): CBaseListView->run()
+#16 /var/www/myblog/protected/views/album/_photos.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#17 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#18 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#20 /var/www/myblog/protected/views/album/update.php(23): CController->renderPartial('_photos', Array)
+#21 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#22 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#23 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#24 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('update', Array, true)
+#25 /var/www/myblog/protected/controllers/AlbumController.php(145): CController->render('update', Array)
+#26 [internal function]: AlbumController->actionUpdate('4')
+#27 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#28 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#29 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#30 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#31 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#32 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#33 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#34 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#35 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#36 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#38 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#39 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#40 /var/www/myblog/index.php(18): CApplication->run()
+#41 {main}
+REQUEST_URI=/index.php/album/update?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/admin
+---
+2015/05/04 08:43:22 [error] [exception.CException] exception 'CException' with message 'Photo and its behaviors do not have a method or closure named "getThumbnail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getThumbnail', Array)
+#1 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): CActiveRecord->__call('getThumbnail', Array)
+#2 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): Photo->getThumbnail()
+#3 /var/www/yii/framework/base/CComponent.php(612): eval()
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(142): CComponent->evaluateExpression('$data->getThumb...', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Photo))
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow(0)
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(149): CBaseListView->renderContent()
+#15 /var/www/yii/framework/web/CBaseController.php(181): CBaseListView->run()
+#16 /var/www/myblog/protected/views/album/_photos.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#17 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#18 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#20 /var/www/myblog/protected/views/album/update.php(23): CController->renderPartial('_photos', Array)
+#21 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#22 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#23 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#24 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('update', Array, true)
+#25 /var/www/myblog/protected/controllers/AlbumController.php(145): CController->render('update', Array)
+#26 [internal function]: AlbumController->actionUpdate('4')
+#27 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#28 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#29 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#30 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#31 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#32 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#33 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#34 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#35 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#36 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#38 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#39 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#40 /var/www/myblog/index.php(18): CApplication->run()
+#41 {main}
+REQUEST_URI=/index.php/album/update?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/admin
+---
+2015/05/04 08:43:22 [error] [exception.CException] exception 'CException' with message 'Photo and its behaviors do not have a method or closure named "getThumbnail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getThumbnail', Array)
+#1 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): CActiveRecord->__call('getThumbnail', Array)
+#2 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): Photo->getThumbnail()
+#3 /var/www/yii/framework/base/CComponent.php(612): eval()
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(142): CComponent->evaluateExpression('$data->getThumb...', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Photo))
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow(0)
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(149): CBaseListView->renderContent()
+#15 /var/www/yii/framework/web/CBaseController.php(181): CBaseListView->run()
+#16 /var/www/myblog/protected/views/album/_photos.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#17 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#18 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#20 /var/www/myblog/protected/views/album/update.php(23): CController->renderPartial('_photos', Array)
+#21 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#22 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#23 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#24 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('update', Array, true)
+#25 /var/www/myblog/protected/controllers/AlbumController.php(145): CController->render('update', Array)
+#26 [internal function]: AlbumController->actionUpdate('4')
+#27 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#28 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#29 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#30 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#31 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#32 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#33 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#34 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#35 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#36 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#38 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#39 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#40 /var/www/myblog/index.php(18): CApplication->run()
+#41 {main}
+REQUEST_URI=/index.php/album/update?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/admin
+---
+2015/05/04 08:43:22 [error] [exception.CException] exception 'CException' with message 'Photo and its behaviors do not have a method or closure named "getThumbnail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getThumbnail', Array)
+#1 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): CActiveRecord->__call('getThumbnail', Array)
+#2 /var/www/yii/framework/base/CComponent.php(612) : eval()'d code(1): Photo->getThumbnail()
+#3 /var/www/yii/framework/base/CComponent.php(612): eval()
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(142): CComponent->evaluateExpression('$data->getThumb...', Array)
+#5 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Photo))
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(578): CGridView->renderTableRow(0)
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(488): CGridView->renderTableBody()
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(149): CBaseListView->renderContent()
+#15 /var/www/yii/framework/web/CBaseController.php(181): CBaseListView->run()
+#16 /var/www/myblog/protected/views/album/_photos.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#17 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#18 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#20 /var/www/myblog/protected/views/album/update.php(23): CController->renderPartial('_photos', Array)
+#21 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/myblog...')
+#22 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/myblog...', Array, true)
+#23 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/myblog...', Array, true)
+#24 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('update', Array, true)
+#25 /var/www/myblog/protected/controllers/AlbumController.php(145): CController->render('update', Array)
+#26 [internal function]: AlbumController->actionUpdate('4')
+#27 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#28 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#29 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#30 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#31 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#32 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#33 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#34 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#35 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#36 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#38 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#39 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#40 /var/www/myblog/index.php(18): CApplication->run()
+#41 {main}
+REQUEST_URI=/index.php/album/update?id=4
+HTTP_REFERER=http://myblog.dev/index.php/album/admin
+---
+2015/05/04 08:48:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/myblog/protected/controllers/AlbumController.php:201
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(117): AlbumController->loadModel('7')
+#1 [internal function]: AlbumController->actionUpdate('7')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/update?id=7
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---
+2015/05/04 08:49:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/myblog/protected/controllers/AlbumController.php:201
+Stack trace:
+#0 /var/www/myblog/protected/controllers/AlbumController.php(117): AlbumController->loadModel('8')
+#1 [internal function]: AlbumController->actionUpdate('8')
+#2 /var/www/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(AlbumController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlbumController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('album/update')
+#14 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /var/www/myblog/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/album/update?id=8
+HTTP_REFERER=http://myblog.dev/index.php/album/update?id=4
+---

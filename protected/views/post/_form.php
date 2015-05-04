@@ -45,3 +45,11 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<?php $this->widget(
+    'booster.widgets.TbCKEditor',
+    array(
+        'name' => 'ckeditor',
+        'htmlOptions'=>array('class'=>'ckeditor'),
+    )
+); ?>

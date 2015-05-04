@@ -131,4 +131,7 @@ class Photo extends CActiveRecord
 	public function getThumb() {
 		return $this->getImageParam()."thumbs/".CHtml::encode($this->filename);
 	}
+	public function getThumbnail(){
+		return CHtml::image($this->getThumb(),$this->alt_text);
+	}
 }

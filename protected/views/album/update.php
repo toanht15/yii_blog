@@ -19,3 +19,25 @@ $this->menu=array(
 <h1>Update Album <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+
+<?php $this->renderPartial('_photos', array('photos'=>$photos)); ?>
+
+<?php 
+	$form=$this->beginWidget('CActiveForm',array(
+		'id'=>'photos-form',
+		'enableAjaxValidation'=>true,
+		));
+ ?>
+
+<?php  
+        $this->widget('xupload.XUpload', array(
+            'url' => Yii::app()->createUrl("album/upload",array('id'=>$model->id)),
+            'model' => $uploads, // change from $model
+            'attribute' => 'file',
+            'multiple' => true,
+            'htmlOptions' => array('id'=>'photos-form'),
+            ));
+
+ ?>
+
+ <?php $this->endWidget(); ?>

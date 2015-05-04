@@ -21,12 +21,17 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.helpers.*',
 		// 'bootstrap.helpers.*',
 		// 'bootstrap.behaviors.*',
 		// 'bootstrap.widgets.*',
 		// 'bootstrap.components.*',
 		// 'bootstrap.form.*',
 	),
+
+	'aliases'=>array(
+		'xupload'=>'ext.xupload',
+		),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -53,6 +58,11 @@ return array(
 		'booster' => array(
 		    'class' => 'ext.booster.components.Booster',
 		),
+
+		'image'=>array(
+			'class'=>'application.extensions.image.CImageComponent',
+			'driver'=>'GD',
+			),
 
 		// uncomment the following to enable URLs in path-format
 		

@@ -24,7 +24,7 @@ class PhotoController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+/*	public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -43,8 +43,23 @@ class PhotoController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}
+	}*/
 
+	public function accessRules()
+	{
+		return array(
+        array('allow',  // allow all users to perform 'list' and 'show' actions
+        	'actions'=>array('index', 'view'),
+        	'users'=>array('*'),
+        	),
+        array('allow', // allow authenticated users to perform any action
+        	'users'=>array('@'),
+        	),
+        array('deny',  // deny all users
+        	'users'=>array('*'),
+        	),
+        );
+	}
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

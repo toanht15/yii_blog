@@ -28,7 +28,7 @@ class Album extends CActiveRecord
 	/**
 	 * @return array validation rules for model attributes.
 	 */
-	public function rules()
+/*	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
@@ -40,7 +40,37 @@ class Album extends CActiveRecord
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, tags, owner_id, shareable, created_dt', 'safe', 'on'=>'search'),
 		);
+	}*/
+
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('owner_id, shareable, category_id', 'numerical', 'integerOnly'=>true),
+			array('name, tags', 'length', 'max'=>255),
+                        array('description','length', 'max'=>1024),
+                        array('description', 'match', 'pattern'=>'/[\w]+/u'), // \-\_\'\ \,\p{L}0-9
+                        // The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('id, name, tags, owner_id, shareable, created_dt', 'safe', 'on'=>'search'),
+		);
 	}
+
+		protected function beforeSave()
+	{
+            d2l(Yii::app()->user->id,"user id");
+            d2l($this->isNewRecord,"isNew");
+            if(parent::beforeSave()) {
+                if($this->isNewRecord) {
+                    $this->created_dt=new CDbExpression("NOW()");
+                    $this->owner_id=Yii::app()->user->id;
+                }
+                return true;
+            }
+            else
+                return false;	
+        }
 
 	/**
 	 * @return array relational rules.
@@ -55,6 +85,17 @@ class Album extends CActiveRecord
 		);
 	}
 
+	   public function scopes()
+        {
+                return array(
+                    'shareable'=>array(
+                        'order'=>'created_dt DESC',
+                        'condition'=>'shareable=1',
+                        )
+                );
+                //$album=Album::$model()->shareable()->findAll();
+        }
+
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
@@ -65,8 +106,10 @@ class Album extends CActiveRecord
 			'name' => 'Name',
 			'tags' => 'Tags',
 			'owner_id' => 'Owner',
-			'shareable' => 'Shareable',
-			'created_dt' => 'Created Dt',
+			'category_id' => 'Catgeory',
+            'description' => 'Description',
+            'shareable' => 'Shareable',
+			'created_dt' => 'created Dt',
 		);
 	}
 
@@ -84,17 +127,15 @@ class Album extends CActiveRecord
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('tags',$this->tags,true);
-		$criteria->compare('owner_id',$this->owner_id);
-		$criteria->compare('shareable',$this->shareable);
-		$criteria->compare('created_dt',$this->created_dt,true);
-
+	        $criteria->compare('description',$this->description);
+            
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

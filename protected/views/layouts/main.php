@@ -70,7 +70,8 @@
         		'class' => 'booster.widgets.TbMenu',
         		'type' => 'navbar',
         		'items' => array(
-        			//array('label' => 'Home', 'url' =>array('/')),
+                    array('label' => 'My Entry', 'url' =>array('/')),
+        			array('label' => 'My Photos', 'url' =>array('/album')),
         			),
         		),
         	'<form class="navbar-form navbar-left" style="margin-left:20px" action=""><div class="form-group"><input type="text" class="form-control" placeholder="Search"></div></form>',
@@ -80,7 +81,8 @@
         		'htmlOptions' => array('class' => 'pull-right', 'style'=>'margin-right: 70px'),
         		'items' => array(
         			array('label' => 'About', 'url' => array('/site/page', 'view'=>'about')),
-        			array('label'=> 'Contact','url'=> "#LoginModal",'linkOptions' => array('data-toggle'=>'modal')	),
+                    //array('label'=> 'Contact','url'=> "#LoginModal",'linkOptions' => array('data-toggle'=>'modal')  ),
+        			array('label'=> 'Contact','url'=> array('/album')	),
                     //array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
         			array('label'=>'Login', 'url'=>"#LoginModal",'linkOptions' => array('data-toggle'=>'modal'), 'visible'=>Yii::app()->user->isGuest),
         			array(

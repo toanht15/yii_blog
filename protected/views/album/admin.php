@@ -40,19 +40,32 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'album-grid',
+	//'id'=>'album-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'pager' => array('cssFile' => Yii::app()->baseUrl . '/css/gridViewStyle/gridView.css'),
+	'cssFile' => Yii::app()->baseUrl . '/css/gridViewStyle/gridView.css',
+	'summaryText' => 'Display {start} - {end} of {count} cool records',
+	'htmlOptions' => array('class' => 'grid-view rounded'),
 	'columns'=>array(
-		'id',
 		'name',
-		'tags',
-		'owner_id',
-		'shareable',
-		'created_dt',
 		array(
-			'class'=>'CButtonColumn',
+		    'name'=>'shareable',
+		    'value'=>'($data->shareable)? \'Yes\' : \'No\''
+		    ),
+		array(
+		    'name'=>'created_dt',
+		    'value'=> 'Yii::app()->dateFormatter->format("dd/MM/yyyy",strtotime($data->created_dt))',
+		    ),
+		array(
+		    'class'=>'CButtonColumn',
+		    'header'=>'Action',
+		    'template'=>'{update} {delete}',
+            'viewButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/images/' . 'gr-view.png',
+            'updateButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/images/' . 'gr-update.png',
+            'deleteButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/images/' . 'gr-delete.png',
 		),
 	),
 )); ?>
