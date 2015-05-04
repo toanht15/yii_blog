@@ -9,6 +9,8 @@ function d2l($what,$where='fb.somewhere'){
     Yii::log($what, 'info', 'application.'.$where);
 }
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);
 // specify how many levels of call stack should be shown in each log message
