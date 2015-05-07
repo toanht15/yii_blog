@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
         array('allow',  // allow all users to perform 'list' and 'show' actions
-        	'actions'=>array('index', 'view'),
+        	'actions'=>array('index', 'view','search'),
         	'users'=>array('*'),
         	),
         array('allow', // allow authenticated users to perform any action
