@@ -1,4 +1,4 @@
-body
+/* body
 {
 	margin: 0;
 	padding: 0;
@@ -6,7 +6,7 @@ body
 	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
 }
-
+ */
 #page
 {
 	margin-top: 50px;
@@ -131,12 +131,12 @@ div.form .rememberMe label
 	display: inline;
 }
 
-div.view
+/* div.view
 {
 	padding: 10px;
 	margin: 10px 0;
 	border: 1px solid #C9E0ED;
-}
+} */
 
 div.breadcrumbs
 {

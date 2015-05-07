@@ -6,18 +6,27 @@
 
 	<?php echo CHtml::errorSummary($model); ?>
 
-	<div class="row">
+	<div class="row login-form">
 		<?php echo $form->labelEx($model,'title'); ?>
 		<?php echo $form->textField($model,'title',array('size'=>80,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'title'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo CHtml::activeTextArea($model,'content',array('rows'=>10, 'cols'=>70)); ?>
-
+	<div class="row ">
+		<?php //echo $form->labelEx($model,'content'); ?>
+		<?php //echo CHtml::activeTextArea($model,'content',array('rows'=>10, 'cols'=>70,	'class'=>'ckeditor'); ?>
+		<?php $this->widget(
+		    'booster.widgets.TbCKEditor',
+		    array(
+		    	
+		        'name' => 'ckeditor',
+		        'model'=>$model,
+		        'attribute'=>'content',
+		        //'htmlOptions'=>array('class'=>'ckeditor'),
+		    )
+		); ?>
 		<p class="hint">You may use <a target="_blank" href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a>.</p>
-		<?php echo $form->error($model,'content'); ?>
+		<?php //echo $form->error($model,'content'); ?>
 	</div>
 
 	<div class="row">
@@ -46,11 +55,7 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<div class="editor" style="display: ">
 
-<?php $this->widget(
-    'booster.widgets.TbCKEditor',
-    array(
-        'name' => 'ckeditor',
-        'htmlOptions'=>array('class'=>'ckeditor'),
-    )
-); ?>
+
+</div>

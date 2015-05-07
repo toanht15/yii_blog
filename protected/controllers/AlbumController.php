@@ -67,6 +67,7 @@ class AlbumController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$this->layout='//layouts/column1';
 		$photos=$dataProvider=new CActiveDataProvider('Photo', array(
 			'criteria'=>array(
 				'condition'=>'album_id=:aid',

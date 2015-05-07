@@ -144,7 +144,26 @@ class PostController extends Controller
 			'dataProvider'=>$dataProvider,
 			));
 	}
-	/**
+
+	public function actionSearch(){
+		
+		 $criteria= new CDbCriteria();
+		 $criteria->addCondition('content LIKE :str');
+		 $criteria->addCondition('title LIKE :str','OR');
+		 $criteria->params[':str']='%'.$_POST['search_str'].'%';
+		 $dataProvider=new CActiveDataProvider('Post', array(
+			'pagination'=>array(
+				'pageSize'=>5,
+				),
+			'criteria'=>$criteria,
+			));
+
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			));
+
+	}
+	/*
 	 * Manages all models.
 	 */
 	public function actionAdmin()

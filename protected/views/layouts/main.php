@@ -6,16 +6,21 @@
 	<meta name="language" content="en">
 
 	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print"> -->
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
 	<![endif]-->
 
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
- 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/app.css" media="screen, projection">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/blog.css" media="screen, projection">
+    
+
+ 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 
 	
@@ -70,19 +75,23 @@
         		'class' => 'booster.widgets.TbMenu',
         		'type' => 'navbar',
         		'items' => array(
-                    array('label' => 'My Entry', 'url' =>array('/')),
         			array('label' => 'My Photos', 'url' =>array('/album')),
         			),
         		),
-        	'<form class="navbar-form navbar-left" style="margin-left:20px" action=""><div class="form-group"><input type="text" class="form-control" placeholder="Search"></div></form>',
-        	array(
+        	'<form class="navbar-form navbar-left" style="margin-left:20px" 
+                action="'
+                .Yii::app()->createUrl('post/search').'"  
+                method="post" >
+                <div class="form-group"><input type="text" name="search_str" id="test" class="form-control" placeholder="Search"></div>
+            </form>',
+            array(
         		'class' => 'booster.widgets.TbMenu',
         		'type' => 'navbar',
         		'htmlOptions' => array('class' => 'pull-right', 'style'=>'margin-right: 70px'),
         		'items' => array(
         			array('label' => 'About', 'url' => array('/site/page', 'view'=>'about')),
                     //array('label'=> 'Contact','url'=> "#LoginModal",'linkOptions' => array('data-toggle'=>'modal')  ),
-        			array('label'=> 'Contact','url'=> array('/album')	),
+        			array('label'=> 'Contact','url'=> array('/site/contact')	),
                     //array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
         			array('label'=>'Login', 'url'=>"#LoginModal",'linkOptions' => array('data-toggle'=>'modal'), 'visible'=>Yii::app()->user->isGuest),
         			array(
@@ -90,7 +99,7 @@
         				'visible'=>!Yii::app()->user->isGuest,
         				'url' => '#',
         				'items' => array(
-        					array('label' => 'Profile', 'url' => '#'),
+        					array('label' => 'Edit Profile', 'url' => array('/user')),
         					array('label' => 'List Post', 'url' => array('/post/index')),
         					array(
         						'label' => 'Something else here',
@@ -120,7 +129,6 @@
     </div>
  
     <div class="modal-body">
-        <div class="testform">
 <?php $model=new LoginForm;
 $form = $this->beginWidget(
     'booster.widgets.TbActiveForm',
@@ -152,10 +160,11 @@ $this->widget(
 
  $this->endWidget();
 unset($form); ?>
+</div>
 <?php $this->endWidget(); ?> <!--end modal-->
 
 
-	<div id="footer">
+	<div id="footer" class="blog-footer">
 		Copyright &copy; <?php echo date('Y'); ?> by OWS.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
