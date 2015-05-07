@@ -13,7 +13,7 @@
     <?php 
     if ($data->photos)  
         echo CHtml::link(
-                    CHtml::image($data->photos[0]->getThumb(),CHtml::encode($data->photos[0]->alt_text),array()),
+                    CHtml::image(Yii::app()->getBaseUrl(true).$data->photos[0]->getThumb(),CHtml::encode($data->photos[0]->alt_text),array()),
                     $this->createUrl('view',array('id'=>$data->id))
                     );
     ?> 

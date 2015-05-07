@@ -9698,3 +9698,168 @@ Stack trace:
 REQUEST_URI=/index.php/post/search
 in /var/www/myblog/protected/controllers/PostController.php (153)
 in /var/www/myblog/index.php (20)
+2015/05/07 05:53:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Định nghĩa  Bản chất của mẫu thiết kế Factory là "Định nghĩa một giao diện (interface) cho việc tạo một đối tượng, nhưng để các lớp con quyết định lớp nào sẽ được tạo. "Factory method" giao việc khởi tạo một đối tượng cụ thể cho lớp con."  Gỉa sử, chúng ta xây dựng 1 "nhà máy" (factory) để "sản xuất" ra các hình vẽ khác nhau, hãy xem mô hình UML dưới đây.".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('?????nh ngh??a ...')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('?????nh ngh??a ...')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/?????nh ng...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/%C4%90%E1%BB%8Bnh%20ngh%C4%A9a%20%20B%E1%BA%A3n%20ch%E1%BA%A5t%20c%E1%BB%A7a%20m%E1%BA%ABu%20thi%E1%BA%BFt%20k%E1%BA%BF%20Factory%20l%C3%A0%20%22%C4%90%E1%BB%8Bnh%20ngh%C4%A9a%20m%E1%BB%99t%20giao%20di%E1%BB%87n%20(interface)%20cho%20vi%E1%BB%87c%20t%E1%BA%A1o%20m%E1%BB%99t%20%C4%91%E1%BB%91i%20t%C6%B0%E1%BB%A3ng,%20nh%C6%B0ng%20%C4%91%E1%BB%83%20c%C3%A1c%20l%E1%BB%9Bp%20con%20quy%E1%BA%BFt%20%C4%91%E1%BB%8Bnh%20l%E1%BB%9Bp%20n%C3%A0o%20s%E1%BA%BD%20%C4%91%C6%B0%E1%BB%A3c%20t%E1%BA%A1o.%20%22Factory%20method%22%20giao%20vi%E1%BB%87c%20kh%E1%BB%9Fi%20t%E1%BA%A1o%20m%E1%BB%99t%20%C4%91%E1%BB%91i%20t%C6%B0%E1%BB%A3ng%20c%E1%BB%A5%20th%E1%BB%83%20cho%20l%E1%BB%9Bp%20con.%22%20%20G%E1%BB%89a%20s%E1%BB%AD,%20ch%C3%BAng%20ta%20x%C3%A2y%20d%E1%BB%B1ng%201%20%22nh%C3%A0%20m%C3%A1y%22%20(factory)%20%C4%91%E1%BB%83%20%22s%E1%BA%A3n%20xu%E1%BA%A5t%22%20ra%20c%C3%A1c%20h%C3%ACnh%20v%E1%BA%BD%20kh%C3%A1c%20nhau,%20h%C3%A3y%20xem%20m%C3%B4%20h%C3%ACnh%20UML%20d%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y.
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---
+2015/05/07 05:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=m&limit=10&timestamp=1430978128463
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---
+2015/05/07 05:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=me&limit=10&timestamp=1430978128955
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---
+2015/05/07 05:55:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=method&limit=10&timestamp=1430978130024
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---
+2015/05/07 06:14:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=de&limit=10&timestamp=1430979282428
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=desi&limit=10&timestamp=1430979283074
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=desig&limit=10&timestamp=1430979283573
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=desigh&limit=10&timestamp=1430979284392
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=design+par&limit=10&timestamp=1430979286107
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=design+partt&limit=10&timestamp=1430979286994
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=design+part&limit=10&timestamp=1430979287578
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:14:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=design+partern&limit=10&timestamp=1430979289012
+HTTP_REFERER=http://myblog.dev/index.php/post/update?id=8
+---
+2015/05/07 06:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=f&limit=10&timestamp=1430979656684
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---
+2015/05/07 06:20:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=fun&limit=10&timestamp=1430979657404
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---
+2015/05/07 06:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('suggestTags')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('suggestTags')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 /var/www/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /var/www/myblog/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/suggestTags?q=function&limit=10&timestamp=1430979658610
+HTTP_REFERER=http://myblog.dev/index.php/post/create
+---

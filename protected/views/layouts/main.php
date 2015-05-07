@@ -101,10 +101,6 @@
         				'items' => array(
         					array('label' => 'Edit Profile', 'url' => array('/user')),
         					array('label' => 'List Post', 'url' => array('/post/index')),
-        					array(
-        						'label' => 'Something else here',
-        						'url' => '#'
-        						),
         					'---',
         					array('label' => 'Logout', 'url'=>array('/site/logout')),
         					)
